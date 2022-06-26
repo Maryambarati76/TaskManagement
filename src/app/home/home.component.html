@@ -1,0 +1,19 @@
+
+<div class=" " >
+    <div class="col">
+      <form class="">
+      <input type="text" class="col text mb-2 rounded-md placeholder-gray-300 h-12 w-96 px-4" name="projectname" placeholder="please add task here" [(ngModel)]="projecttext">
+      <button (click)="additem()" [disabled]="projecttext==''" class="col bg-blue-400 hover:bg-blue-600 text-white font-bold py-2 px-4 border border-blue-700 rounded">
+        Add
+      </button>
+      </form>
+    </div>
+
+      <div class="project-container " *ngFor="let item of projects; let i=index" >
+    <div class="col bg-blue-100 rounded-md w-112 p-5 mb-1" >
+        {{item}} <button class="float-right text-xs bg-red-400 hover:bg-red-600 p-1 text-white font-bold rounded" (click)="removeitem(i)">Remove</button>
+
+    </div>
+      </div>
+  </div>
+     
